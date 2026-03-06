@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import networkx as nx  # Ajout pour le graphe de transitions
+import networkx as nx
 
 from grid import create_experiment_grids
 from astar import graph_search, manhattan, zero_heuristic
@@ -158,7 +158,7 @@ def visualiser_E4_weighted_astar():
         
     fig, ax1 = plt.subplots(figsize=(9, 6))
     
-    # Axe de gauche : Coût (Optimalité)
+    # Axe de gauche : Coût (Optimalite)
     color = 'tab:red'
     ax1.set_xlabel('Poids de l\'heuristique (W)')
     ax1.set_ylabel('Coût du chemin (Optimalité)', color=color)
@@ -191,8 +191,8 @@ def visualiser_transition_graph(epsilon=0.2):
     for state in states:
         if isinstance(state, tuple):
             pos[state] = (state[0], state[1])
-        else:  # 'FAIL'
-            pos[state] = (-1, -1)  # Position arbitraire
+        else:  
+            pos[state] = (-1, -1)  
     
     fig, ax = plt.subplots(figsize=(10, 8))
     nx.draw(G, pos, ax=ax, with_labels=True, node_color='lightblue', node_size=800, font_size=10, arrows=True)
@@ -209,4 +209,4 @@ if __name__ == "__main__":
     visualiser_E2_impact_incertitude()
     visualiser_matrice_transition(epsilon=0.2)
     visualiser_E4_weighted_astar()
-    visualiser_transition_graph()  # Nouvelle
+    visualiser_transition_graph()

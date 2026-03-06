@@ -150,5 +150,5 @@ if __name__ == "__main__":
     run_experiment_E2()
     run_experiment_E3()
     run_experiment_E4()
-    run_experiment_E5()  # Nouvelle
-    analyze_markov_classes()  # Nouvelle
+    run_experiment_E5() 
+    analyze_markov_classes() 
